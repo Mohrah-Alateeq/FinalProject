@@ -1,14 +1,14 @@
-// const pgPromise = require('pg-promise');
-// const pgInstance = pgPromise();
+const pgPromise = require('pg-promise');
+const pgInstance = pgPromise();
 
-// const config = {
-//   host: 'localhost',
-//   port: 5432,
-//   database: 'doctor',
-//   user: 'mohrahalateeq', // your username here!!
-//   password: '200100'
-// }
+const config = {
+  host: 'localhost',
+  port: 5432,
+  database: 'doctor',
+  user: 'mohrahalateeq', // your username here!!
+  password: '200100'
+}
 
-// const connection = pgInstance(config);
+const connection = pgInstance(config);
 
-// module.exports = connection;
+module.exports = connection;
