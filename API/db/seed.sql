@@ -3,15 +3,15 @@ CREATE DATABASE doctor;
 \c doctor
 
 
+
    CREATE TABLE patient(
-     patientID serial primary key,
+      patientID serial primary key,
       pname varchar(50) not null, 
       age int,
       gender varchar(10),
       statusOfDisease varchar(200),
       address varchar(70), 
-      phone varchar(15), 
-      pimage varchar(50)
+      phone varchar(15) 
       );
       
 
@@ -35,7 +35,10 @@ CREATE DATABASE doctor;
 --     foreign key(patientID) references patient(patientID),
 --     foreign key(doctorID) references doctor(doctorID));
 
-INSERT INTO patient(pname ,age ,gender,statusOfDisease ,address ,phone ,pimage)VALUES
-    ('mmm', 20 , 'female','Diabetes','saudi arabia','123','http.com');
+INSERT INTO patient(pname ,age ,gender,statusOfDisease ,address ,phone) VALUES
+    ('mmm', 20 , 'female','Diabetes','saudi arabia','123');
+    INSERT INTO patient(pname ,age ,gender,statusOfDisease ,address ,phone) VALUES
+    ('ddd', 20 , 'male','Diabetes','saudi arabia','456');
 --    INSERT INTO doctor (dname ,address, phoneno ,gender,password , dimage ) VALUES
 -- ('mmm', 'saudi arabia', '123', 'female', '123123','');
+

@@ -14,11 +14,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
 
 app.get('/', (req, res) => {
-  res.send('Doctors');
+  res.send('Doctor');
 })
 
-const patientController = require('./controllers/patientController');
-app.use('/dr', patientController);
+const patientController = require('./controllers/patient');
+
+app.use('/patient', patientController);
 
 
 

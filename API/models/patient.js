@@ -6,7 +6,7 @@ patients.getAll= (req, res, next) => {
   db.manyOrNone('SELECT * from patient;') 
     .then((data) => {
       console.log(data);
-      res.locals.patient = data;
+      res.locals.patients = data;
       next();
     })
     .catch((error) => {
@@ -42,7 +42,7 @@ patients.update = (req, res, next) => {
 }
 
 patients.delete = (req, res, next) => {
-  db.none('DELETE FROM patient WHERE id=$1', [req.params.id])
+  db.none('DELETE FROM patient WHERE id=$1',[req.params.id])
     .then((data) => {
       next();
     })
@@ -52,4 +52,4 @@ patients.delete = (req, res, next) => {
     })
 }
 
-module.exports = patient;
+module.exports = patients;
